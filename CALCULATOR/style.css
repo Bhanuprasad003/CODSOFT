@@ -1,0 +1,142 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f0f2f5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.calculator {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 350px;
+    border: 1px solid #e0e6ed;
+}
+
+.display {
+    background: #f8f9fa;
+    border: 2px solid #dee2e6;
+    border-radius: 8px;
+    color: #212529;
+    font-size: 2em;
+    font-weight: 600;
+    padding: 15px;
+    margin-bottom: 20px;
+    text-align: right;
+    width: 100%;
+    min-height: 70px;
+    resize: none;
+    outline: none;
+}
+
+.display:focus {
+    border-color: #007bff;
+}
+
+.buttons {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 12px;
+}
+
+button {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    font-size: 1.2em;
+    font-weight: 500;
+    height: 60px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    outline: none;
+    background: #ffffff;
+    color: #495057;
+}
+
+button:hover {
+    background: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+button:active {
+    transform: scale(0.98);
+    background: #e9ecef;
+}
+
+.number {
+    background: #ffffff;
+    color: #495057;
+}
+
+.number:hover {
+    background: #f1f3f4;
+}
+
+.operator {
+    background: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+.operator:hover {
+    background: #0056b3;
+    border-color: #004085;
+}
+
+.equals {
+    background: #28a745;
+    color: white;
+    border-color: #28a745;
+    font-weight: 700;
+}
+
+.equals:hover {
+    background: #218838;
+    border-color: #1e7e34;
+}
+
+.clear {
+    background: #dc3545;
+    color: white;
+    border-color: #dc3545;
+}
+
+.clear:hover {
+    background: #c82333;
+    border-color: #bd2130;
+}
+
+.zero {
+    grid-column: span 2;
+}
+
+@media (max-width: 480px) {
+    .calculator {
+        padding: 20px;
+        margin: 10px;
+    }
+
+    .display {
+        font-size: 1.6em;
+        padding: 12px;
+    }
+
+    button {
+        height: 55px;
+        font-size: 1.1em;
+    }
+
+    .buttons {
+        grid-gap: 10px;
+    }
+}
